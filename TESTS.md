@@ -10,6 +10,7 @@ Verify that Pydantic validation rejects products with a negative price.
 Expected Result:
 A ValidationError is raised.
 
+
 test_zero_price_rejected
 
 Purpose:
@@ -17,6 +18,7 @@ Verify that Pydantic validation rejects products with a price equal to zero.
 
 Expected Result:
 A ValidationError is raised.
+
 
 test_valid_product
 
