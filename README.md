@@ -54,6 +54,4 @@ pytest tests/test_product_validation.py -v
 
 The test suite should complete with all tests passing.
 
-The tests are also executed automatically through the GitHub Actions workflow whenever code is pushed or a pull request is created.
-
-The workflow can also be executed manually from the repository's Actions tab.
+Detailed test description can be found in `TESTS.md`.
