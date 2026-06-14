@@ -1,0 +1,39 @@
+# Python Cache
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+# ======
+# Pytest
+
+.pytest_cache/
+
+# ===============
+# Uploaded Images
+
+app/uploads/*
+!app/uploads/.gitkeep
+
+# ====================
+# Virtual Environments
+
+venv/
+.venv/
+env/
+
+# ======
+# VSCode
+
+.vscode/
+
+# =========
+# JetBrains
+
+.idea/
+
+# ============
+# OS-generated
+
+Thumbs.db
+.DS_Store
