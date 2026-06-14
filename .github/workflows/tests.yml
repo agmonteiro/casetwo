@@ -1,4 +1,4 @@
-name: Run Tests
+name: All Tests
 
 on:
   push:
@@ -15,7 +15,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-minimal
 
     steps:
       - name: Checkout repository
@@ -32,5 +32,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run tests
+        env:
+          PYTHONPATH: .
         run: |
           pytest -v
