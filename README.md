@@ -1,5 +1,3 @@
-Casetwo
-
 ## Running the application
 
 Install the dependencies:
