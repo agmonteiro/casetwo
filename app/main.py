@@ -22,6 +22,21 @@ async def create_product(
 ):
     global next_id
 
+    name = name.strip()
+    category = category.strip()
+
+    if not name:
+        raise HTTPException(
+            status_code=400,
+            detail="Name cannot be empty."
+        )
+
+    if not category:
+        raise HTTPException(
+            status_code=400,
+            detail="Category cannot be empty."
+        )
+
     if price <= 0:
         raise HTTPException(
             status_code=400,
@@ -71,6 +86,21 @@ def update_product(
     category: str,
     price: float
 ):
+    name = name.strip()
+    category = category.strip()
+
+    if not name:
+        raise HTTPException(
+            status_code=400,
+            detail="Name cannot be empty."
+        )
+
+    if not category:
+        raise HTTPException(
+            status_code=400,
+            detail="Category cannot be empty."
+        )
+
     if price <= 0:
         raise HTTPException(
             status_code=400,
