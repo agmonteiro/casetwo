@@ -1,4 +1,6 @@
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from .models import Product
 from .storage import save_image
 
@@ -7,8 +9,25 @@ from .storage import save_image
 
 app = FastAPI()
 
+app.mount(
+    "/uploads",
+    StaticFiles(directory="app/uploads"),
+    name="uploads"
+)
+
 products: list[Product] = []
 next_id = 1
+
+# ==============
+# API Protection
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # ================
 # Product Creation
