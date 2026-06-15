@@ -24,6 +24,20 @@ Interactive API documentation:
 http://127.0.0.1:8000/docs
 ```
 
+## Running the viewer
+
+With FastAPI running, execute from the root:
+
+```
+python -m http.server 8080
+```
+
+With viewer server running, access:
+
+```
+http://127.0.0.1:8080/viewer.html
+```
+
 ## Running the tests
 
 Execute all tests:
