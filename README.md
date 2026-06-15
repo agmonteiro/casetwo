@@ -26,13 +26,13 @@ http://127.0.0.1:8000/docs
 
 ## Running the viewer
 
-With FastAPI running, execute from the root:
+With FastAPI running, execute:
 
 ```
 python -m http.server 8080
 ```
 
-With viewer server running, access:
+Then access:
 
 ```
 http://127.0.0.1:8080/viewer.html
@@ -43,22 +43,16 @@ http://127.0.0.1:8080/viewer.html
 Execute all tests:
 
 ```
-pytest
-```
-
-Execute all tests with detailed output:
-
-```
 pytest -v
 ```
 
-Execute only the integration tests:
+Execute only integration tests:
 
 ```
 pytest tests/test_api.py -v
 ```
 
-Execute only the unit tests:
+Execute only unit tests:
 
 ```
 pytest tests/test_product_validation.py -v
